@@ -53,6 +53,7 @@ spec:
               image: registry.access.redhat.com/ubi8/ubi-micro:8.4
               workingDir: $(workspaces.source.path)
               script: |
+                echo "Pipeline-as-Code"
                 exit 0
   workspaces:
   - name: source
