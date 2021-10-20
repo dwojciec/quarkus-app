@@ -14,8 +14,6 @@ To compile and run this demo you will need:
 - JDK 1.8+
 - GraalVM
 
-
-
 ### Configuring GraalVM and JDK 1.8+
 
 Make sure that both the `GRAALVM_HOME` and `JAVA_HOME` environment variables have
