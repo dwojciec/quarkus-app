@@ -2,16 +2,16 @@
 apiVersion: tekton.dev/v1beta1
 kind: PipelineRun
 metadata:
-  name: quarkus-app-pull-request
+  name: quarkus-app-push
   annotations:
     # The event we are targeting (ie: pull_request, push)
-    pipelinesascode.tekton.dev/on-event: "[pull_request]"
+    pipelinesascode.tekton.dev/on-event: "[push]"
 
     # The branch or tag we are targeting (ie: main, refs/tags/*)
     pipelinesascode.tekton.dev/on-target-branch: "[main]"
 
     # Fetch the git-clone task from hub, we are able to reference it with taskRef
-    pipelinesascode.tekton.dev/task: "[git-clone,maven]"
+    pipelinesascode.tekton.dev/task: "[git-clone, maven]"
 
     # You can add more tasks in here to reuse, browse the one you like from here
     # https://hub.tekton.dev/
